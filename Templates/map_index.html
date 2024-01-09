@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Passport Entry Map</title>
+  
+  <!-- D3 library -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Plotly library -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  
+  <!-- Leaflet JavaScript code-->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+  
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/map_style.css">
+
+</head>
+
+</html>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Global Passport Access: Entry Requirement Insights</h1>
+        <p>Use the dropdown menu below or click on the country of origin to select a passport.</p>
+      </div>
+    </div>
+  </div>  
+  <!-- Country Selection Panel -->
+  <div class="dropdown">  
+    <div class="row">
+      <h3>Select Country:</h3>
+      <select id="countrySel" onchange="optionChanged(this.value)"></select>
+    </div>
+  </div>
+  <!-- Create container to hold map and chart -->
+  <div class="container" ></div>
+    <div id="views-container">
+      <!-- The div that holds our map -->  
+      <div id="map" style="width: 1200px; height: 750px;"></div>
+
+      <!-- The div that holds our pie chart -->
+      <div id="pieChart" style="width: 600px; height: 600px;"></div>
+    </div>
+  <!-- Our JavaScript file -->
+  <script type="text/javascript" src="static/js/map_logic.js"></script>
+
+</body>
+</html>
+{% endblock %}
