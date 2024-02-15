@@ -1,6 +1,6 @@
 # passport-visualization-project
 
-The classmates working on this project are Alexandra Turner, Ellis Porter, Isha Chaware, Julia Dettman, and Xiang Li. 
+Isha Chaware
 
 
     * An overview of the project and its purpose
