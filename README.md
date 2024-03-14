@@ -1,6 +1,6 @@
 # passport-visualization-project
 
-Isha Chaware
+Team: Isha Chaware, Alexandra Turner, Ellis Porter, Julia Dettman, and Xiang Li.
 
 
     * An overview of the project and its purpose
